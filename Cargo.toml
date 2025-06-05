@@ -32,3 +32,6 @@ bevy = { version = "0.16.0" }
 [[example]]
 name = "async"
 required-features = ["async"]
+
+[patch.crates-io]
+bevy = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types" }
