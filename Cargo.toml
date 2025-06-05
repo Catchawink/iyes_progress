@@ -10,12 +10,12 @@ categories = ["game-engines"]
 description = "Bevy plugin to help implement loading states"
 
 [dependencies]
-bevy_asset = { version = "0.16.0", default-features = false, optional = true }
-bevy_ecs = { version = "0.16.0", default-features = false }
-bevy_app = { version = "0.16.0", default-features = false }
-bevy_state = { version = "0.16.0", default-features = false }
-bevy_log = { version = "0.16.0", default-features = false, optional = true }
-bevy_platform = { version = "0.16.0", default-features = false }
+bevy_asset = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types", default-features = false, optional = true }
+bevy_ecs = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types", default-features = false }
+bevy_app = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types", default-features = false }
+bevy_state = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types", default-features = false }
+bevy_log = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types", default-features = false, optional = true }
+bevy_platform = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types", default-features = false }
 parking_lot = "0.12.3"
 derive_more = { version = "2.0.1", features = ["full"] }
 crossbeam-channel = { version = "0.5.15", optional = true }
@@ -27,11 +27,8 @@ assets = ["dep:bevy_asset"]
 async = ["dep:crossbeam-channel"]
 
 [dev-dependencies]
-bevy = { version = "0.16.0" }
+bevy = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types" }
 
 [[example]]
 name = "async"
 required-features = ["async"]
-
-[patch.crates-io]
-bevy = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types" }
