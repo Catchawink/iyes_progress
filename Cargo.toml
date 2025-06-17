@@ -27,7 +27,7 @@ assets = ["dep:bevy_asset"]
 async = ["dep:crossbeam-channel"]
 
 [dev-dependencies]
-bevy = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types" }
+bevy = { git = "https://github.com/empathic-ai/bevy.git", branch = "reflect/serializable-dynamic-types", default-features = false }
 
 [[example]]
 name = "async"
